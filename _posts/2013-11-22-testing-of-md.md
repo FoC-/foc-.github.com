@@ -2,11 +2,12 @@
 layout: post
 title: "Install local Jekyll (GitHub pages) on Windows"
 date: 2013-11-22
+tags: Jekyll Github Ruby
 ---
 
-# {{ page.title }}
+## {{ page.title }}
 
-B.S. EXACT Versions should been used
+B.S. **EXACT** Versions should been used
 
 1.  Setup Ruby
     - Download: http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-1.9.3-p448.exe?direct
