@@ -20,7 +20,7 @@ languges:
     <dt>Hobbies:</dt>
     <dd>Baby, Code for fun, Games (computer, board, active) and Active rest (kayaks, walking)</dd>
     <dt class="hidden-print">I'm social:</dt>
-    <dd id="social-buttons" class="hidden-print"></dd>
+    <dd id="social-buttons" class="hidden-print" data-gravatar-hash="{{site.gravatar.hash}}"></dd>
   </dl>
 
   <div class="clearfix"></div>
@@ -73,21 +73,17 @@ Related course work:   OOP, web technologies, computer networks, calculus of app
   </dl>
   
 </div>
-<script type="text/javascript">
-  $(function() {
-    var template = '<a href="{url}" target="_blank"><img src="http://{domain}/favicon.ico" alt="{display}" height="20"></a>';
-    chaoswalkernet.JSONP('http://www.gravatar.com/{{site.gravatar.hash}}.json', function(data) {
-      var accounts = data.entry[0].accounts || [];
-      accounts[accounts.length] = { url: 'https://github.com/FoC-', domain: 'github.com', display: 'github.com'};
-      accounts[accounts.length] = { url: 'http://stackoverflow.com/users/1095657/foc', domain: 'stackoverflow.com', display: 'stackoverflow.com'};
-      accounts[accounts.length] = { url: 'https://bitbucket.org/nickola_kush', domain: 'bitbucket.org', display: 'bitbucket.org'};
-
-      $.each(accounts, function() {
-        var html = template.replace('{url}', this.url)
-                           .replace('{domain}', this.domain)
-                           .replace('{display}', this.display);
-        $("#social-buttons").append(html);
-      });
-    });
-  });
+<!--<script type="text/javascript">
+    // (function () {
+    //   IN.API.Profile("{{site.linkedin.id}}")
+    //     .fields(["firstName", "lastName", "headline", "summary", "id"])
+    //     .result(function(result) {
+    //       alert(JSON.stringify(result));
+    //     });
+    // })();
 </script>
+<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+//   api_key: {{site.linkedin.apiKey}}
+//   authorize: true
+// </script>
+ http://api.linkedin.com/v1/people/id=119665182 -->

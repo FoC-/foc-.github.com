@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  {% include header-scripts.html %}
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/site.css">
   <title>{{ page.title }} - Nikolay Kush</title>
+  <script type="text/javascript" src="/js/require.js" data-main="/js/site"></script>
 </head>
 <body>
   {% include navigation.html %}
@@ -15,6 +14,5 @@
       {{ content }}
     </div>
   </div>
-  <script type="text/javascript" src="/js/site.js"></script>
 </body>
 </html>
