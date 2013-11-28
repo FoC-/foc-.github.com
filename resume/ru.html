@@ -4,8 +4,90 @@ title: "Resume"
 date: 2013-11-22
 languges: 
 -
-    name: en
-    url: "/resume/"
+ name: en
+ url: "/resume/"
 ---
 
-<h1>{{ page.title }}</h1>
+<div class="col-md-12">
+  <h2 class="text-center">NIKOLAY KUSH</h2>
+  <img src="http://www.gravatar.com/avatar/{{site.gravatar.hash}}?s=120" class="pull-left img-rounded visible-lg"/>
+
+  <dl class="dl-horizontal pull-left">
+    <dt>Birthday:</dt>
+    <dd>May 15, 1986</dd>
+    <dt>Native town:</dt>
+    <dd>Krasnodon, Ukraine</dd>
+    <dt>Hobbies:</dt>
+    <dd>Baby, Code for fun, Games (computer, board, active) and Active rest (kayaks, walking)</dd>
+    <dt class="hidden-print">I'm social:</dt>
+    <dd id="social-buttons" class="hidden-print"></dd>
+  </dl>
+
+  <div class="clearfix"></div>
+
+  <dl class="dl-horizontal">
+    <h3>SKILLS/ABILITIES</h3>
+    <dt>Architecture:</dt>
+    <dd><strong>SOLID</strong>, KISS, OOP, TDD, BDD, CI</dd>
+    <dt>Programming Languages:</dt>
+    <dd><strong>C#</strong> (.NET 4.0), <strong>JavaScript</strong> (frameworks), HTML, CSS, SQL, <em>Java</em></dd>
+    <dt>Services:</dt>
+    <dd><strong>REST</strong>, SOAP, WCF</dd>
+    <dt>Protocols:</dt>
+    <dd><strong>HTTP</strong>, TCP/IP</dd>
+    <dt>Databases:</dt>
+    <dd>MS SQL 2008 (Express), MongoDB, Solr, ElasticSearch, <em>Oracle Server</em>, SQLite</dd>
+    <dt>Tools:</dt>
+    <dd><strong>R#</strong>, Reflector, <strong>Git</strong>, Mercurial, Fiddler, Sublime</dd>
+    <dt>Web servers:</dt>
+    <dd><strong>IIS 7.0</strong>, Self-hosted Web Services</dd>
+    <dt>3rd Party libraries:</dt>
+    <dd>Moq, <strong>MSpec</strong>, Nunit, StructureMap, AutoMapper</dd>
+    <dt>Process:</dt>
+    <dd>Scrum, Kanban</dd>
+  </dl>
+
+  <dl>
+    <h3>EDUCATION</h3>
+    <dt>Master of Science, Computer Science Department</dt>
+    <dd>National University of Radioelectronics, Kharkov, Ukraine (June 2009)
+Major: Computer science
+Related course work: Enterprise application development, Service-Oriented Architecture </dd>
+    <dt>Bachelor of Science, Computer Science Department</dt>
+    <dd>National University of Radioelectronics, Kharkov, Ukraine (June 2008)
+Major: Computer science
+Related course work:   OOP, web technologies, computer networks, calculus of approximations, optimization methods, databases, probability theory, algorithms.</dd>
+  </dl>
+
+  <dl>
+    <h3>PERSONAL QUALITIES</h3>
+    <dd>Responsibility, commutability, ability to work in a team, aspiration for learning and adapting new technologies, ability to learn quickly and work under pressure, creativeness, a will to reach professional result, methodical thinking.</dd>
+  </dl>
+
+  <dl class="dl-horizontal">
+    <h3>LANGUAGE</h3>
+    <dt>English</dt>
+    <dd>Advanced reading/writing (have a great experience with native speakers)</dd>
+    <dt>Russian, Ukrainian</dt>
+    <dd>Native</dd>
+  </dl>
+  
+</div>
+<script type="text/javascript">
+  $(function() {
+    var template = '<a href="{url}" target="_blank"><img src="http://{domain}/favicon.ico" alt="{display}" height="20"></a>';
+    chaoswalkernet.JSONP('http://www.gravatar.com/{{site.gravatar.hash}}.json', function(data) {
+      var accounts = data.entry[0].accounts || [];
+      accounts[accounts.length] = { url: 'https://github.com/FoC-', domain: 'github.com', display: 'github.com'};
+      accounts[accounts.length] = { url: 'http://stackoverflow.com/users/1095657/foc', domain: 'stackoverflow.com', display: 'stackoverflow.com'};
+      accounts[accounts.length] = { url: 'https://bitbucket.org/nickola_kush', domain: 'bitbucket.org', display: 'bitbucket.org'};
+
+      $.each(accounts, function() {
+        var html = template.replace('{url}', this.url)
+                           .replace('{domain}', this.domain)
+                           .replace('{display}', this.display);
+        $("#social-buttons").append(html);
+      });
+    });
+  });
+</script>
