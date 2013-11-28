@@ -9,4 +9,7 @@ markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 
-permalink: /post/:title 
+permalink: /post/:title
+
+gravatar:
+  hash: d8fdd0359f09e0e006162ff65e0d2c0a
