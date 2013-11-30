@@ -5,7 +5,12 @@
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/site.css">
   <title>{{ page.title }} - Nikolay Kush</title>
-  <script type="text/javascript" src="/js/require.js" data-main="/js/site"></script>
+  <script type="text/javascript" src="/js/require.js"></script>
+  <script type="text/javascript">
+    require(['/js/require-config.js'], function(config) {
+      require(["ga", "bootstrap", "{{ page.scripts | join: '", "'}}"]);
+    });
+  </script>
 </head>
 <body>
   {% include navigation.html %}
