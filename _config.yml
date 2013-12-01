@@ -14,6 +14,9 @@ permalink: /post/:title
 gravatar:
   hash: d8fdd0359f09e0e006162ff65e0d2c0a
 
+disqus:
+  shortname: chaoswalkernet
+
 linkedin:
   apiKey: 77sanow9o08yir
   id: _gb_4QPpWJ
