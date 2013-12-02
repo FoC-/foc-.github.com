@@ -4,13 +4,10 @@
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/site.css">
+  {% for style in page.styles %}
+  <link rel="stylesheet" type="text/css" href="{{style}}">
+  {% endfor %}
   <title>{{ page.title }} - Nikolay Kush</title>
-  <script type="text/javascript" src="/js/require.js"></script>
-  <script type="text/javascript">
-    require(['/js/require-config.js'], function(config) {
-      require(["ga", "bootstrap", "{{ page.scripts | join: '", "'}}"]);
-    });
-  </script>
 </head>
 <body>
   {% include navigation.html %}
@@ -19,5 +16,11 @@
       {{ content }}
     </div>
   </div>
+  <script type="text/javascript" src="/js/require.js"></script>
+  <script type="text/javascript">
+    require(['/js/require-config.js'], function(config) {
+      require(["ga", "bootstrap", "{{ page.scripts | join: '", "'}}"]);
+    });
+  </script>
 </body>
 </html>
