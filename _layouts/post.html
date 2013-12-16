@@ -1,18 +1,10 @@
 ---
 layout: default
 styles: ["/css/syntax.css"]
-scripts: ["disqus", "//platform.twitter.com/widgets.js", "https://apis.google.com/js/platform.js"]
+scripts: ["disqus", "share"]
 ---
 
 <div class="col-md-10">{{ content }}</div>
-
-{% if page.is.sharingEnabled %}
-<div class="col-md-2 hidden-print">
-  <a href="https://twitter.com/share" class="twitter-share-button" data-via="_FoC_">Tweet</a>
-  <div class="g-plusone" data-size="medium"></div>
-  <script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
-</div>
-{% endif %}
 
 {% if page.is.commentsEnabled %}
 <div class="col-md-10 hidden-print">

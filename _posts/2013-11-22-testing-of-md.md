@@ -5,7 +5,6 @@ date: 2013-11-22
 tags: Jekyll Github Ruby
 is:
     commentsEnabled: true
-    sharingEnabled: true
 ---
 
 # {{ page.title }}
