@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Install local Jekyll (GitHub pages) on Windows"
+title: "Install Jekyll on Windows for GitHub pages"
 date: 2013-11-22
 tags: Jekyll Github Ruby
 is:
@@ -40,5 +40,7 @@ gem 'github-pages'
 7. Download and install Python 2.7 
     - Download: http://www.python.org/ftp/python/2.7.6/python-2.7.6.msi
 
-8. Run Jekyll
+8. Add Path to python into your system PATH variable
+
+9. Run Jekyll
     - jekyll serve
