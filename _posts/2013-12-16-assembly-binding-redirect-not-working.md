@@ -3,6 +3,7 @@ layout: post
 title: "Assembly binding redirect not working"
 date: 2013-12-16
 tags: CSharp AssemblyBinding
+description: "Hints and solutions for resolving issues with assembly binding redirect in C#"
 is:
     commentsEnabled: true
 ---

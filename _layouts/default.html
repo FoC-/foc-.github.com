@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/site.css">
   {% for style in page.styles %}
   <link rel="stylesheet" type="text/css" href="{{style}}">
   {% endfor %}
-  <title>{{ page.title }} - Nikolay Kush</title>
+  <title>{{ page.title }}</title>
 </head>
 <body>
   {% include navigation.html %}

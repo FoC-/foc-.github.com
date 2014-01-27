@@ -3,6 +3,7 @@ layout: post
 title: "Install Jekyll on Windows for GitHub pages"
 date: 2013-11-22
 tags: Jekyll Github Ruby
+description: "Brief manual for instalation of Jekyll GitHub pages on windows"
 is:
     commentsEnabled: true
 ---
