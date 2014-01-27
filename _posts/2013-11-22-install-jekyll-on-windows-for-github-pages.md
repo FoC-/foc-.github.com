@@ -11,6 +11,8 @@ is:
 
 This is short guide or how to install GitHub pages on local environment. In result we will get almost same packages and infrustructure as on the GitHub servers. Why "almost"? Because "pygments" - package for code colorising in versions after 0.5.0 is required Python 3.3. Python 3.3 have strange behavior on windows or bug(but it is still not fixed) with pathes to folders. So **EXACT** Versions should been used.
 
+<!-- more -->
+
 ### Setup Ruby
 First of all we need to [Download](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-1.9.3-p448.exe?direct) and install Ruby. During instalation be sure to check the box to **add ruby to your path**
 

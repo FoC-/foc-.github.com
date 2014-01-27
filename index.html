@@ -2,3 +2,18 @@
 layout: default
 title: Welcome traveller 
 ---
+
+<div class="col-lg-10">
+  <ul class="list-unstyled posts-truncate">
+    {% for post in site.posts limit:5 %}
+    <li>
+      {% if post.content contains "<!-- more -->" %}
+      {{ post.content | split:"<!-- more -->" | first % }}
+      {% else %}
+      {{ post.content | strip_html | truncatewords:100 }}
+      {% endif %}
+      <a href="{{ post.url }}" class="pull-right">Read More</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

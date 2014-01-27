@@ -9,14 +9,13 @@ is:
 
 # {{ page.title }}
 
-### Could not load type
-
-Some times we have new version of library, but some of the old references require old one. In this case assembly binding redirect could help. But what if binding redirect not working and wrong version of assembly was loaded and type was not resolved. The exception will be thrown:
+Some times we have new version of library, but some of the old libraries require old versions. In this case assembly binding redirect is best approach. But sometimes binding redirect is not working and wrong version of assembly was loaded and type was not resolved. When we are expecting that type will be loaded from new version of assembly ```Version=x.x.x.x```, but exception has occurred:
 ```
 "Could not load type 'Type.Name' from assembly 'Assembly.Name, Version=c.c.c.c, Culture=neutral, PublicKeyToken=publickeytoken'"
 ```
+Several hints are exist to resolve this issue. I'll describe some of them.
 
-When we are expecting that type will be loaded from new version of assembly ```Version=x.x.x.x``` several cases exist to resolve this issue. I'll describe general of them.
+<!-- more -->
 
 ### First hint is configuration file for binding redirect:
 
