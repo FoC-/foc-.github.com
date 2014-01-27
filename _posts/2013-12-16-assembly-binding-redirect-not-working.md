@@ -11,7 +11,7 @@ is:
 
 ### Could not load type
 
-Some times we have new version of library, but some of the old references require old one. In this case assembly binding redirect could help. But what if binding redirect not working and wrong version of assebly was loaded and type was not resolved. The exception will be thrown: 
+Some times we have new version of library, but some of the old references require old one. In this case assembly binding redirect could help. But what if binding redirect not working and wrong version of assembly was loaded and type was not resolved. The exception will be thrown:
 ```
 "Could not load type 'Type.Name' from assembly 'Assembly.Name, Version=c.c.c.c, Culture=neutral, PublicKeyToken=publickeytoken'"
 ```
@@ -84,4 +84,4 @@ echo %DEVPATH%
 fuslogvw
 ```
 
-P.S. If you know another useful hints fill free to post in coments.
+P.S. If you know another useful hints fill free to post in comments.
