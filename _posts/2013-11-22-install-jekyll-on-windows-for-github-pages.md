@@ -15,7 +15,7 @@ This is short guide or how to install GitHub pages on local environment. In resu
 First of all we need to [Download](http://dl.bintray.com/oneclick/rubyinstaller/rubyinstaller-1.9.3-p448.exe?direct) and install Ruby. During instalation be sure to check the box to **add ruby to your path**
 
 ### Setup Ruby DevKit
-Now we need to install [Ruby Development Kit](https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe). Unpack it to any folder for exapmle to _C:\RubyDevKit_ then execute commands in console.
+Now we need to install [Ruby Development Kit](https://github.com/downloads/oneclick/rubyinstaller/DevKit-tdm-32-4.5.2-20111229-1559-sfx.exe). Unpack it to any folder for exapmle to ```C:\RubyDevKit``` then execute commands in console.
 
 ``` bat
 cd C:\RubyDevKit
@@ -61,7 +61,7 @@ This step is only required, if you want to use code colorizer pygments. You need
 1. Hold Win and press Pause.
 2. Click Advanced System Settings.
 3. Click Environment Variables.
-4. Append **;C:\python27** to the Path variable. There is NO tarailing backslash. **";"** is separator and required before new path.
+4. Append ```;C:\python27``` to the Path variable. There is NO tarailing backslash. ```;``` - is separator and required before new path.
 
 > After modifing PATH variable, restart all console windows.
 
