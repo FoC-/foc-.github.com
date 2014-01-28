@@ -11,8 +11,25 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li><a href="/post">Blog</a></li>
-        <li><a href="/resume">Curriculum vitae</a></li>
+        {% if site.navigation %}
+          {% for link in site.navigation %}
+            {% assign current = nil %}
+            {% assign url = nil %}
+
+            {% if link.url contains 'index.html' %}
+              {% assign url = link.url %}
+            {% else %}
+              {% assign url = link.url | append: '/index.html'%}
+            {% endif %}
+
+            {% if page.url == url %}
+              {% assign current = 'active' %}
+            {% endif %}
+            <li {% if current %}class="{{ current }}"{% endif %}>
+              <a href="{{ link.url }}">{{ link.text }}</a>
+            </li>
+          {% endfor %}
+        {% endif %}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {% for languge in page.languges %}

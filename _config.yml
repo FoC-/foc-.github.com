@@ -22,3 +22,8 @@ linkedin:
   id: _gb_4QPpWJ
 
 baseurl: http://chaoswalker.net
+navigation:
+  - text: Posts
+    url: /post
+  - text: Curriculum vitae
+    url: /resume
