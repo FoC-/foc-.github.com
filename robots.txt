@@ -1,2 +1,6 @@
+---
+layout: nil
+---
 User-agent: *
-Disallow: 
+Allow: /
+Sitemap: {{ site.baseurl }}/sitemap.xml
