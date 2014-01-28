@@ -2,17 +2,33 @@
 layout: nil
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.baseurl }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
   {% for post in site.posts %}
   <url>
     <loc>{{ site.baseurl }}{{ post.url }}</loc>
     {% if post.lastmod %}
-    <lastmod>{{ post.lastmod }}</lastmod>
+      <lastmod>{{ post.lastmod | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif post.date %}
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     {% else %}
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     {% endif %}
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    {% if post.sitemap.changefreq %}
+      <changefreq>{{ post.sitemap.changefreq }}</changefreq>
+    {% else %}
+      <changefreq>monthly</changefreq>
+    {% endif %}
+    {% if post.sitemap.priority %}
+      <priority>{{ post.sitemap.priority }}</priority>
+    {% else %}
+      <priority>0.5</priority>
+    {% endif %}
   </url>
   {% endfor %}
   {% for page in site.pages %}
@@ -20,12 +36,22 @@ layout: nil
   <url>
     <loc>{{ site.baseurl }}{{ page.url }}</loc>
     {% if page.lastmod %}
-    <lastmod>{{ page.lastmod }}</lastmod>
+      <lastmod>{{ page.lastmod | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif page.date %}
+      <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
     {% else %}
-    <lastmod>{{ page.date }}</lastmod>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     {% endif %}
-    <changefreq>{{ page.sitemap.changefreq }}</changefreq>
-    <priority>{{ page.sitemap.priority }}</priority>
+    {% if page.sitemap.changefreq %}
+      <changefreq>{{ page.sitemap.changefreq }}</changefreq>
+    {% else %}
+      <changefreq>monthly</changefreq>
+    {% endif %}
+    {% if page.sitemap.priority %}
+      <priority>{{ page.sitemap.priority }}</priority>
+    {% else %}
+      <priority>0.3</priority>
+    {% endif %}
   </url>
   {% endif %}
   {% endfor %}
