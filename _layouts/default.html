@@ -13,10 +13,17 @@
   <title>{{ page.title }}</title>
 </head>
 <body>
-  {% include navigation.html %}
-  <div class="container">
-    <div class="row">
-      {{ content }}
+  <div id="wrap">
+    {% include navigation.html %}
+    <div class="container">
+      <div class="row">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <a href="https://plus.google.com/+NickolayKush?rel=author">Me at Google</a>
     </div>
   </div>
   <script type="text/javascript" src="/js/require.js"></script>

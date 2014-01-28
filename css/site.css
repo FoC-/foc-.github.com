@@ -1,1 +1,21 @@
-body { padding-top: 70px; }
+html,
+body {
+  /* Padding and margin is forbidden*/
+  height: 100%;
+}
+/* Sticky header fix */
+#wrap > .container {
+  padding-top: 50px;
+}
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Footer height */
+  margin-bottom: -70px;
+  padding-bottom: 70px;
+}
+/* Set the fixed height of the footer here */
+#footer {
+  height: 70px;
+}
