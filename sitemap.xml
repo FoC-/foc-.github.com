@@ -11,7 +11,7 @@ layout: nil
   </url>
   {% for post in site.posts %}
   <url>
-    <loc>{{ site.baseurl }}{{ post.url }}</loc>
+    <loc>{{ site.baseurl }}{{ post.url }}/</loc>
     {% if post.lastmod %}
       <lastmod>{{ post.lastmod | date: "%Y-%m-%d" }}</lastmod>
     {% elsif post.date %}

@@ -12,7 +12,7 @@ title: Welcome traveller
       {% else %}
       {{ post.content | strip_html | truncatewords:100 }}
       {% endif %}
-      <a href="{{ post.url }}" class="pull-right">Read More</a>
+      <a href="{{ post.url }}/" class="pull-right">Read More</a>
     </li>
     {% endfor %}
   </ul>
