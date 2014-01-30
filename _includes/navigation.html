@@ -19,7 +19,7 @@
             {% if link.url contains 'index.html' %}
               {% assign url = link.url %}
             {% else %}
-              {% assign url = link.url | append: '/index.html'%}
+              {% assign url = link.url | append: 'index.html'%}
             {% endif %}
 
             {% if page.url == url %}

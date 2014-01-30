@@ -24,6 +24,6 @@ linkedin:
 baseurl: http://chaoswalker.net
 navigation:
   - text: Posts
-    url: /post
+    url: /post/
   - text: Curriculum vitae
-    url: /resume
+    url: /resume/
