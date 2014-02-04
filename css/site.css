@@ -19,3 +19,18 @@ body {
 #footer {
   height: 70px;
 }
+
+.intro-background{
+  position: absolute;
+  width: 97%;
+  height: 200px;
+  z-index: -200;
+}
+
+.intro-content{
+  padding-top: 36px;
+}
+
+.intro-text{
+  padding-top: 20px;
+}

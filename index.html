@@ -1,9 +1,27 @@
 ---
 layout: default
-title: Welcome traveller 
+title: Welcome traveler 
+scripts: ["background"]
 ---
 
-<div class="col-lg-10">
+<div class="col-lg-10 col-md-12 col-sm-12">
+  <canvas id="intro-background" class="intro-background"></canvas>
+  <div class="intro-content">
+    <div class="col-lg-10 col-md-10 col-sm-9">
+      <p class="lead text-right intro-text">
+        <i>
+          The most expensive in our live are time and experience, after family of course<br>
+          I'm developer and I know the name of the game<br>
+          Let's try to save your time and share my experience
+        </i>
+      </p>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-3 hidden-xs">
+      <img src="http://www.gravatar.com/avatar/{{site.gravatar.hash}}?s=150" class="img-circle img-responsive" alt="Me">
+    </div>
+  </div>
+</div>
+<div class="col-lg-10 col-md-12 col-sm-12">
   <ul class="list-unstyled posts-truncate">
     {% for post in site.posts limit:5 %}
     <li>
