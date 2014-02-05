@@ -2,15 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width" name="viewport">
+  <meta name="google-site-verification" content="wlax5NG39ZD3mDdecV09qRWJC_tgTAc_9mYvEmbpOkY" />
+
+  <meta content="Nikolay Kush" name="author">
+  <meta content="@_FoC_" name="twitter:site">
+  <meta content="@_FoC_" name="twitter:creator">
+  <link href="https://plus.google.com/+NickolayKush/posts" rel="author">
+  <link href="/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml">
+  <link href="/favicon.ico" rel="shortcut icon">
+  <link href="{{ site.baseurl }}{{ page.url }}" rel="canonical">
+
+  <title>{{ page.title }}</title>
+  <meta content="{{ page.title }}" property="og:title">
+  <meta content="{{ page.title }}" name="twitter:title">
   {% if page.description %}
-  <meta name="description" content="{{ page.description }}">
+  <meta content="{{ page.description }}" name="description">
+  <meta content="{{ page.description }}" property="og:description">
+  <meta content="{{ page.description }}" name="twitter:description">
   {% endif %}
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/site.css">
   {% for style in page.styles %}
   <link rel="stylesheet" type="text/css" href="{{style}}">
   {% endfor %}
-  <title>{{ page.title }}</title>
 </head>
 <body>
   <div id="wrap">
@@ -19,11 +35,6 @@
       <div class="row">
         {{ content }}
       </div>
-    </div>
-  </div>
-  <div id="footer">
-    <div class="container">
-      <a href="https://plus.google.com/+NickolayKush?rel=author">Me at Google</a>
     </div>
   </div>
   <script type="text/javascript" src="/js/require.js"></script>
