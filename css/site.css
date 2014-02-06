@@ -34,3 +34,7 @@ body {
 .intro-text{
   padding-top: 20px;
 }
+
+.posts-list code{
+  white-space: normal;
+}
