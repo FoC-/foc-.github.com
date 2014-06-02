@@ -7,6 +7,6 @@ scripts: ["disqus", "share"]
 <div class="col-lg-10">
   <article>{{ content }}</article>
   {% if page.is.commentsEnabled %}
-  <div id="disqus_thread" data-disqus-shortname="{{ site.disqus.shortname }}" data-disqus-identifier="{{ page.url }}" data-disqus-url="http://chaoswalker.net{{ page.url }}" class="hidden-print"></div>
+  <div id="disqus_thread" data-disqus-shortname="{{ site.disqus.shortname }}" data-disqus-identifier="{{ page.url }}" data-disqus-url="{{ site.baseurl }}{{ page.url }}" class="hidden-print"></div>
   {% endif %}
 </div>
